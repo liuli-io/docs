@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html  lang="zn-ch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+      <title>环境变量</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="分发器配置" href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html" />
+  <link rel="prev" title="开始" href="%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Liuli</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">使用教程</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" class="reference internal ">开始</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">环境变量</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">环境变量</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id1" class="reference internal">环境变量</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">分发器配置</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html" class="reference internal ">分发器配置</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">备份器配置</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html" class="reference internal ">备份器配置</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">树莓派配置教程</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" class="reference internal ">树莓派配置教程</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>环境变量</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"
+       title="previous chapter">← 开始</a>
+  </li>
+  <li class="next">
+    <a href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="next chapter">分发器配置 →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="id1">
+<h1>环境变量<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Liuli</span></code> 项目环境变量说明：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># ======================================系统环境配置======================================#
+# 当前目录为模块
+PYTHONPATH=${PYTHONPATH}:${PWD}
+
+# =======================================数据库配置=======================================#
+# MongoDB 用户名
+LL_M_USER=&quot;&quot;
+# MongoDB 密码
+LL_M_PASS=&quot;&quot;
+# MongoDB IP
+# Docker Compose 形式启动的话，此行配置不变
+LL_M_HOST=&quot;liuli_mongodb&quot;
+# MongoDB 端口
+LL_M_PORT=&quot;27017&quot;
+# MongoDB 默认 db
+# 如果用户自建db，填写自己的即可 此时 LL_M_OP_DB 可不填
+LL_M_DB=&quot;admin&quot;
+LL_M_OP_DB=&quot;liuli&quot;
+
+# ======================================接口服务配置======================================#
+# Flask 是否开启Flask的Debug模式
+LL_FLASK_DEBUG=0
+# Flask IP
+LL_HOST=&quot;0.0.0.0&quot;
+# Flask 端口
+LL_HTTP_PORT=8765
+# 访问域名，没有域名填本机实际地址（因为要开放对外访问），如: http://192.168.0.1:8765
+LL_DOMAIN=&quot;&quot;
+# Flask 服务启动的 worker 数量
+LL_WORKERS=1
+
+# =======================================分发器配置=======================================#
+# 分发器终端配置，用户在环境变量配置好密钥后，在启动配置的 sender.sender_list 填写好想分发的终端即可
+# 目前支持：ding[钉钉] wecom[企业微信] tg[Telegram] Bark
+# 分发终端为钉钉必须配置的Token
+LL_D_TOKEN=&quot;&quot;
+# 分发终端为企业微信的配置，如果不配置分发用户与部门，则默认会发送给所有部门的所有用户
+LL_WECOM_ID=&quot;&quot;
+LL_WECOM_AGENT_ID=&quot;-1&quot;
+LL_WECOM_SECRET=&quot;&quot;
+# 企业微信分发用户（填写用户帐号，不区分大小写），多个用户用;分割
+LL_WECOM_TO_USER=&quot;&quot;
+# 企业微信分发部门（填写部门名称），多个部门用;分割
+LL_WECOM_PARTY=&quot;&quot;
+# TG 终端配置
+LL_TG_CHAT_ID=&quot;&quot;
+LL_TG_TOKEN=&quot;&quot;
+# Bark推送链接
+LL_BARK_URL=&quot;&quot;
+
+# =======================================备份器配置=======================================#
+# 备份器目前支持: github mongodb
+# 使用 mongodb 备份的话则默认使用上面配置的数据库地址进行备份
+# 使用 github 备份的话需要填写以下配置
+# 项目权限token
+LL_GITHUB_TOKEN=&quot;&quot;
+# 文章保存项目地址，例：howie6879/liuli_backup 项目名称一定为 liuli_backup
+LL_GITHUB_REPO=&quot;&quot;
+# 访问域名，可自定义也可以用默认的，如果用github做备份器就必填，以我个人备份项目为例地址为：https://howie6879.github.io/liuli_backup/
+LL_GITHUB_DOMAIN=&quot;&quot;
+</pre></div>
+</div>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"
+       title="previous chapter">← 开始</a>
+  </li>
+  <li class="next">
+    <a href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="next chapter">分发器配置 →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Howie.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

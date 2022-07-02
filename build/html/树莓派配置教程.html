@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html  lang="zn-ch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+      <title>树莓派配置教程</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="prev" title="备份器配置" href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Liuli</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">使用教程</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" class="reference internal ">开始</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">环境变量</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" class="reference internal ">环境变量</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">分发器配置</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html" class="reference internal ">分发器配置</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">备份器配置</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html" class="reference internal ">备份器配置</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">树莓派配置教程</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">树莓派配置教程</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#mongodb" class="reference internal">安装 MongoDB [重要]</a></li>
+                
+                  <li class="toctree-l2"><a href="#docker" class="reference internal">Docker 部署</a></li>
+                
+                  <li class="toctree-l2"><a href="#id8" class="reference internal">源码部署</a></li>
+                
+                  <li class="toctree-l2"><a href="#id9" class="reference internal">说明</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>树莓派配置教程</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="previous chapter">← 备份器配置</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="id1">
+<h1>树莓派配置教程<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/liuli-io/liuli">Liuli</a> 的目标是帮助你一站式构建多源、干净、个性化的阅读环境，目前还在缓慢开发迭代中，欢迎更多的朋友参与进来，其当前可应用的场景有：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mp.weixin.qq.com/s/rxoq97YodwtAdTqKntuwMA">基于Liuli构建纯净的RSS公众号信息流</a></p></li>
+<li><p><a class="reference external" href="https://mp.weixin.qq.com/s/RSVZFxiq8G7a51te4q93gQ">基于Liuli追更&amp;阅读小说</a></p></li>
+</ul>
+<p>建议使用前看一下上面的文章，有个大概印象，接下来将根据以下方式来介绍如何在树莓派上面安装 <code class="docutils literal notranslate"><span class="pre">Liuli</span></code> :</p>
+<ul class="simple">
+<li><p>Docker部署</p></li>
+<li><p>源码部署</p></li>
+</ul>
+<section id="mongodb">
+<h2>安装 MongoDB [重要]<a class="headerlink" href="#mongodb" title="Permalink to this heading">¶</a></h2>
+<p>因为 <code class="docutils literal notranslate"><span class="pre">Liuli</span></code> 依赖 <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code> 作为数据库，而在树莓派下 <code class="docutils literal notranslate"><span class="pre">Docker</span></code> 启用 <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code> 有点混乱，所以这块咱就直接在系统上安装，再者因为有的朋友可能配置不是很高，都带不动 <code class="docutils literal notranslate"><span class="pre">Docker</span></code> ，到时直接源码部署的话更是要在系统上安装。</p>
+<p>安装 <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code>：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 升级更新</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
+
+<span class="c1"># 在 ``/etc/apt/sources.list`` 添加软件源</span>
+<span class="n">wget</span> <span class="o">-</span><span class="n">qO</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">mongodb</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">static</span><span class="o">/</span><span class="n">pgp</span><span class="o">/</span><span class="n">server</span><span class="o">-</span><span class="mf">4.4</span><span class="o">.</span><span class="n">asc</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
+<span class="n">echo</span> <span class="s2">&quot;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mongodb</span><span class="o">-</span><span class="n">org</span><span class="o">-</span><span class="mf">4.4</span><span class="o">.</span><span class="n">list</span>
+
+<span class="c1"># 安装MongoDB</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">mongodb</span><span class="o">-</span><span class="n">org</span>
+
+<span class="c1"># 启动</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">daemon</span><span class="o">-</span><span class="n">reload</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">mongod</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">mongod</span>
+<span class="c1"># 查看状态</span>
+<span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">status</span> <span class="n">mongod</span>
+
+<span class="c1"># 进入MongoDB</span>
+<span class="n">mongo</span>
+</pre></div>
+</div>
+<p>创建用户：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">use</span> <span class="n">admin</span>
+<span class="n">db</span><span class="o">.</span><span class="n">createUser</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;liuli&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;pwd&quot;</span><span class="p">:</span> <span class="s2">&quot;liuli&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;roles&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;userAdminAnyDatabase&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dbAdminAnyDatabase&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;readWriteAnyDatabase&quot;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">exit</span>
+</pre></div>
+</div>
+<p>配置操作 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">/etc/mongod.conf</span></code> ，改动如下：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 修改 bindIp 为 0.0.0.0，外部可访问</span>
+<span class="n">net</span><span class="p">:</span>
+  <span class="n">port</span><span class="p">:</span> <span class="mi">27017</span>
+  <span class="n">bindIp</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
+<span class="c1"># 增加登录验证</span>
+<span class="n">security</span><span class="p">:</span>
+   <span class="n">authorization</span><span class="p">:</span> <span class="n">enabled</span>
+</pre></div>
+</div>
+<p>重启生效：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">restart</span> <span class="n">mongod</span>
+</pre></div>
+</div>
+<p>此时登录：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 注意自己的 ip</span>
+<span class="n">sudo</span> <span class="n">mongo</span> <span class="o">--</span><span class="n">host</span> <span class="s2">&quot;192.168.0.2&quot;</span> <span class="o">-</span><span class="n">u</span> <span class="s2">&quot;liuli&quot;</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;liuli&quot;</span>
+
+<span class="c1"># 查看数据库</span>
+<span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">adminCommand</span><span class="p">({</span><span class="n">listDatabases</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="docker">
+<h2>Docker 部署<a class="headerlink" href="#docker" title="Permalink to this heading">¶</a></h2>
+<p>总的来说，<code class="docutils literal notranslate"><span class="pre">Docker</span></code> 部署还是比较方便的，特别针对不熟悉 <code class="docutils literal notranslate"><span class="pre">Python</span></code> 的朋友，所以把这个方式放在第一位。</p>
+<section id="id3">
+<h3>安装 Docker<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<p>首先我们来安装 <code class="docutils literal notranslate"><span class="pre">Docker</span></code>：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get install apt-transport-https ca-certificates software-properties-common -y
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+# 如果网速慢，可以尝试：sudo sh get-docker.sh --mirror Aliyun
+sudo sh get-docker.sh
+
+# 添加密钥
+curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/raspbian/gpg | sudo apt-key add -
+
+# 在 ``/etc/apt/sources.list`` 添加软件源
+sudo add-apt-repository \
+    &quot;deb [arch=armhf] https://mirrors.aliyun.com/docker-ce/linux/raspbian \
+    $(lsb_release -cs) \
+    stable&quot;
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+# 更新
+sudo apt-get update
+sudo apt-get upgrade
+
+# 刷新
+newgrp docker
+
+# 启动
+sudo systemctl enable docker
+sudo systemctl start docker
+
+# 测试
+sudo docker run hello-world
+</pre></div>
+</div>
+<p>可以考虑引入 <code class="docutils literal notranslate"><span class="pre">portainer</span></code> 来管理：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">docker_data</span><span class="o">/</span><span class="n">portainer_data</span>
+<span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8001</span><span class="p">:</span><span class="mi">8000</span> <span class="o">-</span><span class="n">p</span> <span class="mi">9001</span><span class="p">:</span><span class="mi">9000</span> <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">portainer</span> <span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">docker_data</span><span class="o">/</span><span class="n">portainer_data</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> <span class="n">portainer</span><span class="o">/</span><span class="n">portainer</span><span class="o">-</span><span class="n">ce</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Docker 部署<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<p>接下来就是正式部署了：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 下载 api 和 schedule 镜像</span>
+<span class="n">sudo</span> <span class="n">docker</span> <span class="n">pull</span> <span class="n">liuliio</span><span class="o">/</span><span class="n">api</span><span class="p">:</span><span class="n">v0</span><span class="mf">.1.3</span>
+<span class="n">sudo</span> <span class="n">docker</span> <span class="n">pull</span> <span class="n">liuliio</span><span class="o">/</span><span class="n">schedule</span><span class="p">:</span><span class="n">v0</span><span class="mf">.2.4</span>
+
+<span class="c1"># 建立配置目录</span>
+<span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">liuli</span><span class="o">/</span><span class="n">liuli_config</span>
+<span class="n">sudo</span> <span class="n">touch</span> <span class="n">liuli</span><span class="o">/</span><span class="n">pro</span><span class="o">.</span><span class="n">env</span>
+<span class="n">sudo</span> <span class="n">touch</span> <span class="n">liuli</span><span class="o">/</span><span class="n">liuli_config</span><span class="o">/</span><span class="n">wechat</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>先来看看 <code class="docutils literal notranslate"><span class="pre">pro.env</span></code> 配置：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PYTHONPATH=${PYTHONPATH}:${PWD}
+LL_M_USER=&quot;liuli&quot;
+LL_M_PASS=&quot;liuli&quot;
+# 你的外部可访问ip
+LL_M_HOST=&quot;192.168.0.2&quot;
+LL_M_PORT=&quot;27017&quot;
+LL_M_DB=&quot;admin&quot;
+LL_M_OP_DB=&quot;liuli&quot;
+LL_FLASK_DEBUG=0
+LL_HOST=&quot;0.0.0.0&quot;
+LL_HTTP_PORT=8765
+LL_DOMAIN=&quot;&quot;
+LL_WORKERS=1
+# 上面这么多配置不用改，下面的才需要各自配置
+# 是否发送通知给钉钉
+LL_D_TOKEN=&quot;&quot;
+# 是否发送通知给微信
+LL_WECOM_ID=&quot;&quot;
+LL_WECOM_AGENT_ID=&quot;-1&quot;
+LL_WECOM_SECRET=&quot;&quot;
+# 在你的github建立仓库 liuli_backup 即可
+# 也可以不填，完全填空，也就是内容不备份到github
+LL_GITHUB_TOKEN=&quot;&quot;
+LL_GITHUB_REPO=&quot;{your_github_name}/liuli_backup&quot;
+LL_GITHUB_DOMAIN=&quot;https://{your_github_name}.github.io/liuli_backup/&quot;
+</pre></div>
+</div>
+<p>请详细查看以下文档进行具体参数配置，按照流程操作，很简单：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="分发器配置.html#id2">分发器配置</a> 钉钉微信配置获取教程</p></li>
+<li><p><a class="reference external" href="备份器配置.html">备份器配置</a></p></li>
+<li><p><a class="reference external" href="环境变量.html">参数说明</a></p></li>
+</ul>
+<p>配置好后，请将以上内容写到 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">liuli/pro.env</span></code> 文件。</p>
+<p>接下来直接配置公众号相关，直接使用 <code class="docutils literal notranslate"><span class="pre">Liuli</span></code> 官方的配置 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">liuli/liuli_config/wechat.json</span></code> ：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;wechat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;liuli_team&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doc_source&quot;</span><span class="p">:</span> <span class="s2">&quot;liuli_wechat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;collector&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;wechat&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;wechat_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;小众消息&quot;</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;delta_time&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;spider_type&quot;</span><span class="p">:</span> <span class="s2">&quot;sg_ruia&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;spider_type_des&quot;</span><span class="p">:</span> <span class="s2">&quot;当镜像是schedule:playwright_*时，spider_type可填写sg_playwright&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;processor&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;before_collect&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;after_collect&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;ad_marker&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cos_value&quot;</span><span class="p">:</span> <span class="mf">0.6</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="s2">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;to_rss&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;doc_source_list&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;liuli_wechat&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;link_source&quot;</span><span class="p">:</span> <span class="s2">&quot;github&quot;</span>
+
+        <span class="p">}]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;sender&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;sender_list&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;wecom&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;query_days&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;delta_time&quot;</span><span class="p">:</span> <span class="mi">3</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;backup&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;backup_list&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mongodb&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;query_days&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">&quot;delta_time&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;init_config&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;after_get_content&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s2">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;str_replace&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;before_str&quot;</span><span class="p">:</span> <span class="s2">&quot;data-src=</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;after_str&quot;</span><span class="p">:</span> <span class="s2">&quot;src=</span><span class="se">\&quot;</span><span class="s2">https://images.weserv.nl/?url=&quot;</span>
+        <span class="p">}]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;period_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;00:10&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;12:10&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;21:10&quot;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>此时文件夹目录如下：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(base) ➜  cd liuli
+(base) ➜  liuli tree -L 2
+.
+├── liuli_config
+│   └── wechat.json
+└── pro.env
+</pre></div>
+</div>
+<p>配置完毕，接下来就可以启动了：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 启动 API
+sudo docker run -d -it --restart=always -p 8765:8765 -v $PWD/pro.env:/data/code/pro.env --name liuli_api liuliio/api:v0.1.3
+# 启动 schedule
+sudo docker run -d -it --restart=always -v $PWD/pro.env:/data/code/pro.env -v $PWD/liuli_config:/data/code/liuli_config --name liuli_schedule liuliio/schedule:v0.2.4
+</pre></div>
+</div>
+<p>成功日志如下：</p>
+<img alt="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/pi_liuli_logs.jpg" src="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/pi_liuli_logs.jpg" />
+<p>此时访问以下接口可进行验证：</p>
+<ul class="simple">
+<li><p>获取公众号rss地址: <a class="reference external" href="http://0.0.0.0:8765/rss/liuli_wechat">http://0.0.0.0:8765/rss/liuli_wechat</a>/小众消息/</p></li>
+<li><p>查看目标公众号备份的文章：<a class="reference external" href="http://0.0.0.0:8765/backup/liuli_wechat">http://0.0.0.0:8765/backup/liuli_wechat</a>/公众号名称/文章名称</p></li>
+</ul>
+<p>至此，你可以订阅和查看目标公众号的文章了。</p>
+<p>&gt;注意⚠️：IP根据自身部署服务的IP填写</p>
+<p>公众号rss地址效果：</p>
+<img alt="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/202204300055506.png" src="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/202204300055506.png" />
+<p>目标公众号备份文章：</p>
+<img alt="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/202204300059906.png" src="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/202204300059906.png" />
+<p>如果需要微信消息提示，请移步：[分发器配置｜钉钉微信配置教程](<a class="reference external" href="https://github.com/liuli-io/liuli/blob/main/docs/03.%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.md">https://github.com/liuli-io/liuli/blob/main/docs/03.%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.md</a>)</p>
+<img alt="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/m3nJ61-20220430135131890.png" src="https://cdn.jsdelivr.net/gh/howie6879/oss/uPic/m3nJ61-20220430135131890.png" />
+</section>
+</section>
+<section id="id8">
+<h2>源码部署<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
+<p>如果你是直接看的源码部署，请先阅读 <code class="docutils literal notranslate"><span class="pre">Docker部署</span></code> 部分，拷贝好以下文件：</p>
+<ul class="simple">
+<li><p>wechat.json</p></li>
+<li><p>pro.env</p></li>
+</ul>
+<p>首先，下载源码：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">liuli</span><span class="o">-</span><span class="n">io</span><span class="o">/</span><span class="n">liuli</span><span class="o">.</span><span class="n">git</span>
+
+<span class="c1"># 删除掉 Pipfile 里面以下行</span>
+<span class="c1"># black = &quot;*&quot;</span>
+<span class="c1"># isort = &quot;*&quot;</span>
+<span class="c1"># pylint = &quot;*&quot;</span>
+<span class="c1"># pytest = &quot;*&quot;</span>
+<span class="c1"># pandas = &quot;*&quot;</span>
+<span class="c1"># numpy = &quot;*&quot;</span>
+<span class="c1"># pypinyin = &quot;*&quot;</span>
+<span class="c1"># playwright = &quot;*&quot;</span>
+
+<span class="c1"># 保证有 python3.7+ 环境</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pipenv</span>
+<span class="n">pipenv</span> <span class="n">install</span> <span class="o">--</span><span class="n">python</span> <span class="p">{</span><span class="n">your_python3</span><span class="mf">.7</span><span class="n">_path</span><span class="p">}</span> <span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">lock</span> <span class="o">--</span><span class="n">dev</span>
+
+<span class="c1"># 配置</span>
+<span class="c1"># 将上面的 pro.env 内容拷贝</span>
+<span class="n">vim</span> <span class="n">pro</span><span class="o">.</span><span class="n">env</span>
+<span class="c1"># 删除 liuli_config 文件夹所有内容</span>
+<span class="c1"># 将 wechat.json 复制到 liuli_config/wechat.json</span>
+
+<span class="c1"># 启动 API</span>
+<span class="n">bash</span> <span class="o">./</span><span class="n">start</span><span class="o">.</span><span class="n">sh</span> <span class="n">api</span> <span class="n">pro</span>
+<span class="c1"># 启动 schedule</span>
+<span class="n">bash</span> <span class="o">./</span><span class="n">start</span><span class="o">.</span><span class="n">sh</span> <span class="n">schedule</span> <span class="n">pro</span>
+</pre></div>
+</div>
+<p>查看日志：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>((liuli) ) (base) ➜  liuli git:(main) ✗ bash ./start.sh api pro
+Start api(pro) serve: PIPENV_DOTENV_LOCATION=./pro.env pipenv run gunicorn -c src/config/gunicorn.py src.api.http_app:app
+Loading .env environment variables...
+[2022-04-28 15:00:50 +0800] [29074] [INFO] Starting gunicorn 20.1.0
+[2022-04-28 15:00:50 +0800] [29074] [INFO] Listening at: http://0.0.0.0:8765 (29074)
+[2022-04-28 15:00:50 +0800] [29074] [INFO] Using worker: gevent
+[2022-04-28 15:00:50 +0800] [29079] [INFO] Booting worker with pid: 29079
+[2022:04:28 15:00:54] INFO  Liuli API server(v0.1.3) started successfully :)
+...
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h2>说明<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h2>
+<p>上述过程参考资料如下：</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.mongodb.com/developer/how-to/mongodb-on-raspberry-pi/">Install &amp; Configure MongoDB on the Raspberry Pi</a></p>
+<p><a class="reference external" href="https://www.anegron.site/2020/06/18/how-to-install-conda-and-docker-on-your-raspberry-pi/">How to install Conda and Docker on your Raspberry Pi</a></p>
+<p><a class="reference external" href="https://yeasy.gitbook.io/docker_practice/install/raspberry-pi">Docker 入门到实践-raspberry-pi</a></p>
+<p><a class="reference external" href="https://docs.docker.com/engine/install/">Docker官方文档 Install Docker Engine</a></p>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="previous chapter">← 备份器配置</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Howie.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

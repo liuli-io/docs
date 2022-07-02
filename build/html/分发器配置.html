@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html  lang="zn-ch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+      <title>分发器配置</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="备份器配置" href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html" />
+  <link rel="prev" title="环境变量" href="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Liuli</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">使用教程</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" class="reference internal ">开始</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">环境变量</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" class="reference internal ">环境变量</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">分发器配置</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">分发器配置</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">钉钉</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">企业微信</a></li>
+                
+                  <li class="toctree-l2"><a href="#telegram" class="reference internal">Telegram</a></li>
+                
+                  <li class="toctree-l2"><a href="#bark" class="reference internal">Bark</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">备份器配置</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html" class="reference internal ">备份器配置</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">树莓派配置教程</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" class="reference internal ">树莓派配置教程</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>分发器配置</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html"
+       title="previous chapter">← 环境变量</a>
+  </li>
+  <li class="next">
+    <a href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="next chapter">备份器配置 →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="id1">
+<h1>分发器配置<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>目前分发器支持类型如下：</p>
+<ul class="simple">
+<li><p>[推荐] wecom：企业微信</p></li>
+<li><p>ding：钉钉</p></li>
+<li><p>tg: Telegram</p></li>
+</ul>
+<section id="id2">
+<h2>钉钉<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>建立一个群聊用于接收文章消息，然后新增一个群机器人，如下图：</p>
+<img alt="https://raw.githubusercontent.com/howie6879/oss/master/images/GctXXh.jpg" src="https://raw.githubusercontent.com/howie6879/oss/master/images/GctXXh.jpg" />
+<p>然后配置机器人：</p>
+<img alt="https://raw.githubusercontent.com/howie6879/oss/master/images/7iWlhv.jpg" src="https://raw.githubusercontent.com/howie6879/oss/master/images/7iWlhv.jpg" />
+<p>最后记住机器人对应的 <code class="docutils literal notranslate"><span class="pre">Token</span></code> ，一般格式如 <code class="docutils literal notranslate"><span class="pre">1dea61224e683d90c5d3694c89e30841681567747f41fb9722597d48655f4365</span></code> ，那么此时分发器配置如下：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 分发配置，目标支持：ding[钉钉]、wecom[企业微信]、tg[Telegram] 等等</span>
+<span class="n">SENDER_LIST</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ding&quot;</span><span class="p">]</span>
+<span class="c1"># 申请钉钉TOKEN时候，关键字必须带有 [liuli] !重要</span>
+<span class="n">DD_TOKEN</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;LL_D_TOKEN&#39;</span><span class="p">,</span> <span class="s1">&#39;1dea61224e683d90c5d3694c89e30841681567747f41fb9722597d48655f4365&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>企业微信<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>如果你热衷微信生态，<code class="docutils literal notranslate"><span class="pre">Liuli</span></code> 同样对企业微信做了支持，请先随便用手机号注册一个 <a class="reference external" href="https://work.weixin.qq.com/">企业微信</a> 。</p>
+<p>首先创造应用：</p>
+<img alt="https://raw.githubusercontent.com/howie6879/oss/master/images/2Cfkbw.png" src="https://raw.githubusercontent.com/howie6879/oss/master/images/2Cfkbw.png" />
+<p>获取相关ID：</p>
+<img alt="https://raw.githubusercontent.com/howie6879/oss/master/images/zLGP5T.png" src="https://raw.githubusercontent.com/howie6879/oss/master/images/zLGP5T.png" />
+<p>企业ID在 <code class="docutils literal notranslate"><span class="pre">我的企业-&gt;企业信息-&gt;企业ID</span></code> 。</p>
+<p>为了方便可以在微信上接收消息，记得开启微信插件，进入下图所在位置，然扫码关注你的二维码即可：</p>
+<img alt="https://raw.githubusercontent.com/howie6879/oss/master/images/zlfcd9.png" src="https://raw.githubusercontent.com/howie6879/oss/master/images/zlfcd9.png" />
+<p>现在你获取了以下三个参数，请到对应配置填写秘钥即可：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WECOM_ID</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CC_WECOM_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;wwee29721ad4f6e1c9&quot;</span><span class="p">)</span>
+<span class="n">WECOM_AGENT_ID</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CC_WECOM_AGENT_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;-1&quot;</span><span class="p">)</span>
+<span class="n">WECOM_SECRET</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span>
+    <span class="s2">&quot;CC_WECOM_SECRET&quot;</span><span class="p">,</span> <span class="s2">&quot;O4M9w38wuwAxCMr0O3lTqAgzLC7yxjsDGr6lgv12345&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="telegram">
+<h2>Telegram<a class="headerlink" href="#telegram" title="Permalink to this heading">¶</a></h2>
+<section id="token">
+<h3>获取Token<a class="headerlink" href="#token" title="Permalink to this heading">¶</a></h3>
+<p>首先，通过以下链接连接到 <code class="docutils literal notranslate"><span class="pre">&#64;BotFather</span></code> : <a class="reference external" href="https://telegram.me/BotFather">https://telegram.me/BotFather</a> 当在电报中打开与 <code class="docutils literal notranslate"><span class="pre">BotFather</span></code> 的聊天窗口时，按下 <code class="docutils literal notranslate"><span class="pre">Start</span></code> 按钮。</p>
+<p>你会看到像这样的消息：</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotStart.jpeg" src="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotStart.jpeg" />
+<p>发送 <code class="docutils literal notranslate"><span class="pre">/newbot</span></code> 命令：</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotNew.jpeg" src="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotNew.jpeg" />
+<p>并输入您的机器人的名称：</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotName.jpeg" src="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotName.jpeg" />
+<p>然后，需要为机器人设定用户名，设定之后将返回 <code class="docutils literal notranslate"><span class="pre">Telegram</span> <span class="pre">Bot</span></code> 的 <code class="docutils literal notranslate"><span class="pre">Token</span></code> :</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotToken.jpeg" src="https://gitee.com/howie6879/oss/raw/master/uPic/TGbotToken.jpeg" />
+</section>
+<section id="chat-id">
+<h3>获取 chat id<a class="headerlink" href="#chat-id" title="Permalink to this heading">¶</a></h3>
+<p>通过以下链接连接到 <code class="docutils literal notranslate"><span class="pre">&#64;userinfobot</span></code> : <a class="reference external" href="https://telegram.me/userinfobot">https://telegram.me/userinfobot</a> 当在电报中打开与 <code class="docutils literal notranslate"><span class="pre">userinfobot</span></code> 的聊天窗口时，输入任意内容，它将返回你的 <code class="docutils literal notranslate"><span class="pre">chat</span> <span class="pre">id</span></code> ：</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/TGuserInfoBot.jpeg" src="https://gitee.com/howie6879/oss/raw/master/uPic/TGuserInfoBot.jpeg" />
+</section>
+<section id="id5">
+<h3>设置对应环境变量<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<p>修改 <code class="docutils literal notranslate"><span class="pre">.env</span></code> 文件设置环境变量：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 你Telegram的chat id</span>
+<span class="n">LL_TG_CHAT_ID</span> <span class="o">=</span> <span class="s2">&quot;1222431510&quot;</span>
+<span class="c1"># 你TelegramBot的Token</span>
+<span class="n">LL_TG_TOKEN</span> <span class="o">=</span> <span class="s2">&quot;5065136980:BBF4uhUcGLP1-6qOHBfIT_0EArbXjek91GY&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bark">
+<h2>Bark<a class="headerlink" href="#bark" title="Permalink to this heading">¶</a></h2>
+<p>仅介绍 <code class="docutils literal notranslate"><span class="pre">Bark</span></code> 客户端的使用，要自行部署 <code class="docutils literal notranslate"><span class="pre">Bark</span></code> 服务端，请参考 <a class="reference external" href="https://github.com/Finb/bark-server">bark-server</a> 。</p>
+<section id="url">
+<h3>获取推送url<a class="headerlink" href="#url" title="Permalink to this heading">¶</a></h3>
+<p>打开APP，复制URL</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/003rYfqply1grd1meqrvcj60bi08zt9i02.jpg" src="https://gitee.com/howie6879/oss/raw/master/uPic/003rYfqply1grd1meqrvcj60bi08zt9i02.jpg" />
+</section>
+<section id="id6">
+<h3>设置对应环境变量<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<p>修改 <code class="docutils literal notranslate"><span class="pre">.env</span></code> 文件设置环境变量 <code class="docutils literal notranslate"><span class="pre">LL_BARK_URL</span></code></p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html"
+       title="previous chapter">← 环境变量</a>
+  </li>
+  <li class="next">
+    <a href="%E5%A4%87%E4%BB%BD%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="next chapter">备份器配置 →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Howie.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

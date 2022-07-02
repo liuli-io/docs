@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html  lang="zn-ch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+      <title>备份器配置</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="树莓派配置教程" href="%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" />
+  <link rel="prev" title="分发器配置" href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Liuli</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         使用教程
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         环境变量
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         分发器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link  router-link-active">
+         备份器配置
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-liuli-s-documentation"
+         class="nav-link ">
+         树莓派配置教程
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/schettino72/sphinx_press_theme"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">使用教程</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html" class="reference internal ">开始</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">环境变量</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" class="reference internal ">环境变量</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">分发器配置</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html" class="reference internal ">分发器配置</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">备份器配置</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">备份器配置</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#github" class="reference internal">GitHub</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-liuli-s-documentation">树莓派配置教程</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" class="reference internal ">树莓派配置教程</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>备份器配置</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="previous chapter">← 分发器配置</a>
+  </li>
+  <li class="next">
+    <a href="%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html"
+       title="next chapter">树莓派配置教程 →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="id1">
+<h1>备份器配置<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>目前备份器支持类型如下：</p>
+<ul class="simple">
+<li><p>GitHub</p></li>
+<li><p>MongoDB（默认支持）: 直接使用即可，无需配置</p></li>
+</ul>
+<section id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">GitHub</span></code> 备份器需要用户进行配置，流程如下：</p>
+<section id="token">
+<h3>生成Token<a class="headerlink" href="#token" title="Permalink to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">GitHub</span></code> 仓库数据同步需要  <a class="reference external" href="https://github.com/settings/tokens/new">生成Token</a> （权限请勾选 repo 和 user）：</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/UiI0cB.png" src="https://gitee.com/howie6879/oss/raw/master/uPic/UiI0cB.png" />
+<p>获取的 <code class="docutils literal notranslate"><span class="pre">Token</span></code> 请填写到 <code class="docutils literal notranslate"><span class="pre">LL_GITHUB_TOKEN</span></code> 。</p>
+</section>
+<section id="liuli-backup">
+<h3>建立 <code class="docutils literal notranslate"><span class="pre">liuli_backup</span></code> 仓库<a class="headerlink" href="#liuli-backup" title="Permalink to this heading">¶</a></h3>
+<p>需要建立名为 <code class="docutils literal notranslate"><span class="pre">liuli_backup</span></code> 的仓库保存文章：</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/GJKYIv.png" src="https://gitee.com/howie6879/oss/raw/master/uPic/GJKYIv.png" />
+<p>创建成功后，点 <code class="docutils literal notranslate"><span class="pre">https://github.com/{your_github_name}/liuli_backup/settings`</span></code> 进行配置，然后下拉找到 <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Pages</span></code> :</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/e9Ed75.png" src="https://gitee.com/howie6879/oss/raw/master/uPic/e9Ed75.png" />
+<p>点击  <code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">it</span> <span class="pre">out</span> <span class="pre">here</span></code> !，实际上就是访问 <code class="docutils literal notranslate"><span class="pre">https://github.com/{your_github_name}/liuli_backup/settings/page</span></code> 进行相关设置，操作如下图：</p>
+<img alt="https://gitee.com/howie6879/oss/raw/master/uPic/7fPX7z.png" src="https://gitee.com/howie6879/oss/raw/master/uPic/7fPX7z.png" />
+<p>最后在 <code class="docutils literal notranslate"><span class="pre">pro.env</span></code> 填写一下变量即可( <code class="docutils literal notranslate"><span class="pre">{your_github_name}</span></code> 替换成自己的)：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LL_GITHUB_REPO</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{your_github_name}</span><span class="s2">/liuli_backup&quot;</span>
+<span class="n">LL_GITHUB_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://</span><span class="si">{your_github_name}</span><span class="s2">.github.io/liuli_backup/&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="%E5%88%86%E5%8F%91%E5%99%A8%E9%85%8D%E7%BD%AE.html"
+       title="previous chapter">← 分发器配置</a>
+  </li>
+  <li class="next">
+    <a href="%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html"
+       title="next chapter">树莓派配置教程 →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Howie.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

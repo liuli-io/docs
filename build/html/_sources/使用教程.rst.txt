@@ -1,0 +1,236 @@
+.. image:: https://raw.githubusercontent.com/howie6879/oss/master/images/uuNLVj.jpg
+
+`Liuli <https://github.com/howie6879/liuli>`_ 的目的是为了 **构建一个多源、干净、个性化的阅读环境** ，一起来看看怎么安装部署 `Liuli <https://github.com/howie6879/liuli>`_ 吧。
+
+--------------
+开始
+--------------
+
+`Liuli <https://github.com/howie6879/liuli>`_ 项目对于一些基础环境是有一点要求的，为了尽可能减少开发者部署使用的复杂度（特别是非Python开发者），因此我计划使用 ``Docker`` 进行调度运行，这样对用户的使用来说是比较方便的，请按照以下酌情执行 ``TODO`` ：
+
+- [ ] 安装 `Docker <https://www.docker.com/>`_
+- [ ] 镜像安装运行：❤️ 推荐
+
+  - [ ] 一键安装
+  - [ ] 单独安装（已有DB）
+- [ ] 代码安装 ``Liuli`` ：
+
+  - [ ] 下载 ``Liuli``
+  - [ ] 配置 ``Liuli``
+  - [ ] 运行 ``Liuli``
+
+推荐直接使用 ``Docker`` 进行安装，可使用 `Docker 极速下载 <https://get.daocloud.io/>`_ 进行安装。
+
+使用场景：
+
+- [x] 公众号应用实践：
+
+  - [x] **广告问题**：`打造一个干净且个性化的公众号阅读环境 <https://mp.weixin.qq.com/s/NKnTiLixjB9h8fSd7Gq8lw>`_
+  - [x] **RSS订阅问题**：`基于Liuli构建纯净的RSS公众号信息流 <https://mp.weixin.qq.com/s/rxoq97YodwtAdTqKntuwMA>`_
+- [ ] 信息监控
+- [ ] 数据备份
+
+--------------
+镜像安装
+--------------
+
+一键安装:
+
+::
+
+    mkdir liuli && cd liuli
+    # 数据库目录
+    mkdir mongodb_data
+    # 任务配置目录
+    mkdir liuli_config
+    wget -O liuli_config/default.json https://raw.githubusercontent.com/howie6879/liuli/main/liuli_config/default.json
+    # 配置 pro.env 具体查看 环境变量ƒ
+    vim pro.env
+    # 下载 docker-compose
+    wget https://raw.githubusercontent.com/howie6879/liuli/main/docker-compose.yaml
+    # 启动
+    docker-compose up -d
+    # 重新启动 liuli_schedule
+    docker-compose restart liuli_schedule
+    # 关闭
+    docker-compose down
+
+对于 ``pro.env`` 环境变量配置，参考文档见：
+
+- `环境变量 <环境变量.html>`_
+- `分发器配置 <分发器配置.html>`_
+- `备份器配置 <备份器配置.html>`_
+
+然后在当前目录 ``liuli_rooot_path`` 终端执行以下命令启动：::
+
+    docker-compose up -d
+
+    # 输出
+    # Creating network "liuli_liuli-network" with driver "bridge"
+    # Creating liuli_mongodb ... done
+    # Creating liuli_api      ... done
+    # Creating liuli_schedule ... done
+
+不出意外，可以看到下面容器成功启动：
+
+.. image:: https://gitee.com/howie6879/oss/raw/master/uPic/rRfTdg.png
+
+**************
+单独安装
+**************
+
+假如你希望将 ``Liuli`` 的各个模块单独安装，那么这个方式就适合你。
+
+`Liuli <https://github.com/howie6879/liuli>`_ 项目的存储部署依赖 ``MongoDB`` ，如果你已经部署好了 ``MongoDB`` ，直接在 **env配置文件** 里面进行数据库配置即可。
+
+如果你没有 ``MongoDB`` ，可以使用 ``Docker`` 一键执行：::
+
+    # 数据库路径，开发者可自由设置
+    mkdir -p /data/db
+    cd /data/db
+    docker run --name liuli_mongodb  --restart=always -p 27017:27017 -v "`pwd`:/data/db" -e MONGO_INITDB_ROOT_USERNAME=liuli -e MONGO_INITDB_ROOT_PASSWORD=liuli -d mongo:3.6
+
+可在 ``Docker`` 查询是否成功启动：::
+
+    docker ps -a
+
+    # 输出
+    # CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS                      NAMES
+    # ab5e54de6c4f   mongo:3.6   "docker-entrypoint.s…"   58 seconds ago   Up 57 seconds   0.0.0.0:27017->27017/tcp   liuli_mongodb
+
+接下来启动 ``liuli_schedule`` ：::
+
+    mkdir liuli
+
+    # 配置 pro.env 具体查看 环境变量
+    vim pro.env
+
+    # 启动
+    docker run -d -it --restart=always -v $PWD/pro.env:/data/code/pro.env -v $PWD/liuli_config:/data/code/liuli_config --name liuli_schedule liuliio/schedule:v0.2.4
+
+输出日志如下：::
+
+    Loading .env environment variables...
+    [2021:12:23 23:08:35] INFO  Liuli Schedule started successfully :)
+    [2021:12:23 23:08:35] INFO  Liuli Schedule time: 00:00 06:00
+    [2021:12:23 23:09:36] INFO  Liuli playwright 匹配公众号 老胡的储物柜(howie_locker) 成功! 正在提取最新文章: 我的周刊(第018期)
+    [2021:12:23 23:09:39] INFO  Liuli 公众号文章持久化成功! 👉 老胡的储物柜
+    [2021:12:23 23:09:40] INFO  Liuli 🤗 微信公众号文章更新完毕(1/1)
+    ...
+    [2021:12:23 23:09:45] INFO  Liuli 备份器执行完毕!
+
+最后启动 ``liuli_api`` ：::
+
+    # 保证 pro.env 配置好
+    vim pro.env
+    # 启动
+    docker run -d -it --restart=always -p 8765:8765 -v $PWD/pro.env:/data/code/pro.env --name liuli_api liuliio/api:v0.1.3
+
+
+**************
+代码安装
+**************
+
+代码安装支持系统如下：
+
+- Windows
+- MacOS
+- Linux
+
+其他系统请使用 ``Docker`` 进行安装。
+
+==============
+下载Liuli
+==============
+
+安装 `Liuli <https://github.com/howie6879/liuli>`_ 前，需要你的系统环境安装有 `Python3.7+ <https://www.python.org/>`_ 环境。如果确认准备好环境，请进入终端，做环境检查，如下命令：
+::
+
+    [~] python --version
+    Python 3.7.9 :: Anaconda, Inc.
+    [~] pip --version
+    pip 20.1 from /Users/howie/.local/share/virtualenvs/liuli-pL4LHJaI/lib/python3.7/site-packages/pip (python 3.7)
+
+本项目使用 `pipenv <https://pipenv.pypa.io/en/latest/>`_ 进行项目管理，安装使用过程如下：::
+
+    # 确保有Python3.7+环境
+    git clone https://github.com/howie6879/liuli.git
+    cd liuli
+
+    # 创建基础环境
+    pipenv install --python={your_python3.7+_path}  --skip-lock --dev
+
+搭建好基础环境后，就需要对项目进行配置，具体参考如下 **Liuli配置** 部分。
+
+==============
+配置Liuli
+==============
+
+`Liuli <https://github.com/howie6879/liuli>`_ 项目的配置文件位于路径 ``src/config/config.py`` 下，使用者可以进行以下配置：
+
+- 配置需要订阅的公众号
+- 数据库
+- 分发器类型配置
+
+直接在 ``.env`` 文件中增加相关 `环境配置 <环境变量.html>`_ 即可：::
+
+    # 公众号配置, 输入你订阅的公众号名称即可
+    LL_WECHAT_ACCOUNT="是不是很酷;老胡的储物柜"
+
+    # 数据库配置
+    # 如果是本机开发，使用上述方法搭建的 ``MongoDB`` ，以下内容保持不变即可
+    LL_M_USER=""
+    LL_M_PASS=""
+    LL_M_HOST=""
+    LL_M_PORT="27017"
+    LL_M_DB="liuli"
+
+    # 分发器配置
+    # 目前分发器支持类型如下：
+    #   - ding：钉钉
+    #   - wecom：企业微信
+    #   - tg: Telegram
+    LL_D_TOKEN=""
+    LL_WECOM_ID=""
+    LL_WECOM_AGENT_ID="-1"
+    LL_WECOM_SECRET=""
+
+对于分发器相关对象的密钥申请教程，详见 `分发器配置 <分发器配置.html>`_
+
+==============
+运行Liuli
+==============
+
+配置完成后，直接在终端运行即可：::
+
+    # 配置.env 具体查看 环境变量
+    pipenv run dev_schedule
+
+不出意外，会得到以下输出：::
+
+    > pipenv run dev_schedule
+
+    [2021:12:23 22:17:52] INFO  Liuli Schedule started successfully :)
+    [2021:12:23 22:17:53] INFO  Liuli Schedule time:
+     00:00
+     06:00
+     09:00
+     12:00
+     15:00
+     18:00
+     21:00
+    [2021:12:23 22:17:56] INFO  Liuli playwright 匹配公众号 是不是很酷(isnt_it_cool) 成功! 正在提取最新文章: 软件工程师和算法竞赛
+    [2021:12:23 22:17:59] INFO  Liuli 公众号文章持久化成功! 👉 是不是很酷
+    [2021:12:23 22:18:02] INFO  Liuli playwright 匹配公众号 老胡的储物柜(howie_locker) 成功! 正在提取最新文章: 我的周刊(第018期)
+    [2021:12:23 22:18:05] INFO  Liuli 公众号文章持久化成功! 👉 老胡的储物柜
+    [2021:12:23 22:18:08] INFO  Liuli 🤗 微信公众号文章更新完毕(2/2)
+
+这样就成功启动了，微信终端分发效果如下：
+
+.. image:: https://raw.githubusercontent.com/howie6879/oss/master/images/m3nJ61.png
+
+..
+
+    `Liuli <https://github.com/howie6879/liuli>`_ 项目还处于快速迭代的开发状态，此文档随时会变动，切记。
+
+    如果阅读体验不好，建议移步博客阅读 `Liuli 使用教程 <https://www.howie6879.cn/post/2021/11_2c_quick_start/>`_ 。
